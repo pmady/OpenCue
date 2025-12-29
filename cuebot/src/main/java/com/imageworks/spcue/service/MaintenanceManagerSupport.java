@@ -225,9 +225,8 @@ public class MaintenanceManagerSupport {
     }
 
     /**
-     * Recalculates subscription core usage values to fix accountability issues
-     * that can occur at large scale. This calls the recalculate_subs() database
-     * function that was added in PR #1380.
+     * Recalculates subscription core usage values to fix accountability issues that can occur at
+     * large scale. This calls the recalculate_subs() database function that was added in PR #1380.
      */
     public void recalculateSubscriptions() {
         if (!maintenanceDao.lockTask(MaintenanceTask.LOCK_SUBSCRIPTION_RECALCULATION)) {
